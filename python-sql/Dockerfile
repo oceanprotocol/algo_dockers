@@ -15,7 +15,7 @@ COPY . /tmp
 WORKDIR /tnp
 
 RUN python3.6 -m pip install setuptools
-RUN python3.6 -m pip install -r requirements.txt
+RUN python3.6 -m pip install -r /tmp/requirements.txt
 
 
 
