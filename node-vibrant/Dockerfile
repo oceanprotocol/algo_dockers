@@ -1,4 +1,4 @@
 FROM node:latest
 
-RUN npm --global config set user root && \
-    npm --global install node-vibrant
+USER node
+RUN npm install -g node-vibrant
