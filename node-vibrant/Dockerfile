@@ -1,6 +1,4 @@
 FROM node:latest
 
-#WORKDIR /usr/src/app
-
-#COPY package.json ./
-RUN npm install -g node-vibrant
+RUN npm --global config set user root && \
+    npm --global install node-vibrant
