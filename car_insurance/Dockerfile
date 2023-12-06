@@ -5,7 +5,12 @@ RUN apt-get update && \
     python3-tk \
     tk-dev \
     python3-pip \
-    libagg-dev
+    libagg-dev \
+    libgl1-mesa-glx -y
+
+RUN apt-get install 'ffmpeg'\
+    'libsm6'\
+    'libxext6' -y
     
 COPY requirements.txt /tmp/
 RUN pip install wheel
