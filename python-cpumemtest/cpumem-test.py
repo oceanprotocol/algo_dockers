@@ -1,7 +1,8 @@
-import threading
 import time
 import os
 import random
+from multiprocessing import Process
+
 
 
 # there is no memory allocation test for now
@@ -23,7 +24,7 @@ if __name__ =="__main__":
     print(f"Starting {threads_nr} threads for a duration of {duration} seconds each...")
     t = [None] * threads_nr
     for n in range(0,threads_nr):
-        t[n] = threading.Thread(target=thr, args=(duration,memory,))
+        t[n] = Process(target=thr, args=(duration,memory,))
         t[n].start()
 
     # wait for threads to complete
